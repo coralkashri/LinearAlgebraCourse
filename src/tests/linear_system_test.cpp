@@ -1,4 +1,4 @@
-#include "linear_system_test.h"
+#include "linear_system_test.hpp"
 
 namespace LinearAlgebra {
 

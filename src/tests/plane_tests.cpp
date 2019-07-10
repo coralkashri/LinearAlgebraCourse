@@ -1,4 +1,4 @@
-#include "plane_tests.h"
+#include "plane_tests.hpp"
 
 namespace LinearAlgebra {
 

@@ -3,9 +3,9 @@
 
 #include <iomanip>
 #include <boost/format.hpp>
-#include "tests/vector_tests.h"
-#include "tests/line_tests.h"
-#include "tests/plane_tests.h"
+#include "tests/vector_tests.hpp"
+#include "tests/line_tests.hpp"
+#include "tests/plane_tests.hpp"
 #include "linear_system.hpp"
 
 using namespace LinearAlgebra;

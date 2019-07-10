@@ -1,4 +1,4 @@
-#include "vector_tests.h"
+#include "vector_tests.hpp"
 
 namespace LinearAlgebra {
 
