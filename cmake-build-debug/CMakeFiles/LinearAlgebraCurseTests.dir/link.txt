@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/LinearAlgebraCurseTests.dir/src/main.cpp.o CMakeFiles/LinearAlgebraCurseTests.dir/src/vector.cpp.o  -o LinearAlgebraCurseTests -lsrc 

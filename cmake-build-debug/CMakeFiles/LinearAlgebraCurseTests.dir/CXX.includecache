@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sherlock/CLionProjects/LinearAlgebraCurse/src/exceptions.hpp
+utility
+-
+iostream
+-
+string
+-
+sstream
+-
+exception
+-
+
+/home/sherlock/CLionProjects/LinearAlgebraCurse/src/main.cpp
+iostream
+-
+iomanip
+-
+vector.hpp
+/home/sherlock/CLionProjects/LinearAlgebraCurse/src/vector.hpp
+
+/home/sherlock/CLionProjects/LinearAlgebraCurse/src/vector.cpp
+vector.hpp
+/home/sherlock/CLionProjects/LinearAlgebraCurse/src/vector.hpp
+
+/home/sherlock/CLionProjects/LinearAlgebraCurse/src/vector.hpp
+iostream
+-
+vector
+-
+cmath
+-
+exceptions.hpp
+/home/sherlock/CLionProjects/LinearAlgebraCurse/src/exceptions.hpp
+

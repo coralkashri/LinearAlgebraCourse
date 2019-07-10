@@ -1,0 +1,16 @@
+/home/sherlock/Downloads/clion-2018.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/sherlock/CLionProjects/LinearAlgebraCurse
+-- Boost version: 1.58.0
+-- Found the following Boost libraries:
+--   system
+--   thread
+--   regex
+--   coroutine
+--   context
+--   filesystem
+--   date_time
+--   unit_test_framework
+--   chrono
+--   atomic
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug

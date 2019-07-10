@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="LinearAlgebraCurse"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LinearAlgebraCurse">
+				<Option output="/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/LinearAlgebraCurse" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 LinearAlgebraCurse"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LinearAlgebraCurse/fast">
+				<Option output="/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/LinearAlgebraCurse" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 LinearAlgebraCurse/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/sherlock/CLionProjects/LinearAlgebraCurse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/exceptions.hpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/hyperplane.cpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/hyperplane.hpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/line.cpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/line.hpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/linear_system.cpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/linear_system.hpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/main.cpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/plane.cpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/plane.hpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/tests/line_tests.cpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/tests/line_tests.h">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/tests/linear_system_test.cpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/tests/linear_system_test.h">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/tests/plane_tests.cpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/tests/plane_tests.h">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/tests/unit_test_example.cpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/tests/vector_tests.cpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/tests/vector_tests.h">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/utilities/linear_algebra.cpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/utilities/linear_algebra.hpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/vector.cpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/src/vector.hpp">
+			<Option target="LinearAlgebraCurse"/>
+		</Unit>
+		<Unit filename="/home/sherlock/CLionProjects/LinearAlgebraCurse/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
