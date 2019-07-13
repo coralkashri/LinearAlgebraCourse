@@ -19,6 +19,6 @@ set(CMAKE_CXX_STANDARD 14)
 
 file(GLOB_RECURSE SOURCES RELATIVE ${CMAKE_SOURCE_DIR} "src/*")
 
-add_executable(LinearAlgebraCurse ${SOURCES} src/line.cpp src/line.hpp src/utilities/linear_algebra.cpp src/utilities/linear_algebra.hpp src/plane.cpp src/plane.hpp src/tests/line_tests.cpp src/tests/line_tests.hpp src/linear_system.cpp src/linear_system.hpp src/tests/plane_tests.cpp src/tests/plane_tests.hpp src/tests/linear_system_test.cpp src/tests/linear_system_test.hpp)
+add_executable(LinearAlgebraCurse ${SOURCES} src/line.cpp src/line.hpp src/utilities/linear_algebra.cpp src/utilities/linear_algebra.hpp src/plane.cpp src/plane.hpp src/tests/line_tests.cpp src/tests/line_tests.hpp src/linear_system.cpp src/linear_system.hpp src/tests/plane_tests.cpp src/tests/plane_tests.hpp src/tests/linear_system_test.cpp src/tests/linear_system_test.hpp src/matrix.cpp src/matrix.hpp src/tests/matrix_tests.cpp src/tests/matrix_tests.h)
 
 target_link_libraries(LinearAlgebraCurse ${Boost_LIBRARIES})

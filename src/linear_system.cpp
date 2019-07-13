@@ -4,18 +4,12 @@
 namespace LinearAlgebra {
 
     linear_system::linear_system(const std::vector<LinearAlgebra::hyperplane> &planes) {
-        try {
-            size_t d = planes[0].get_dimension();
-            for (auto &p : planes) {
-                __glibcxx_assert(p.get_dimension() == d);
-            }
-
-            this->planes = planes;
-            this->dimension = d;
-
-        } catch (std::exception &e) {
-            throw planesInDifferentDimException();
+        size_t d = planes[0].get_dimension();
+        for (auto &p : planes) {
+            if (p.get_dimension() != d) throw planesInDifferentDimException();
         }
+        this->planes = planes;
+        this->dimension = d;
     }
 
     void linear_system::assertion_idx_test(size_t idx) {

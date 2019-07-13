@@ -107,10 +107,38 @@ namespace LinearAlgebra {
         }
     };
 
+    class rowsInDifferentDimException : public std::exception {
+        virtual const char* what() const throw()
+        {
+            return "All rows in matrix should live in the same dimension.";
+        }
+    };
+
     class hyperplanesInDifferentDimException : public std::exception {
         virtual const char* what() const throw()
         {
             return "All hyper-planes in the system should live in the same dimension.";
+        }
+    };
+
+    class rowNotExistsInMatrixException : public std::exception {
+        virtual const char* what() const throw()
+        {
+            return "This row does not exists in this matrix.";
+        }
+    };
+
+    class illegalRowException : public std::exception {
+        virtual const char* what() const throw()
+        {
+            return "Specified row is illegal.";
+        }
+    };
+
+    class NotImplementedError : public std::exception {
+        virtual const char* what() const throw()
+        {
+            return "This feature does not implemented yet.";
         }
     };
 }
