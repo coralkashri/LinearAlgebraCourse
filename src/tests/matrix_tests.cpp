@@ -1,7 +1,3 @@
-//
-// Created by sherlock on 7/14/19.
-//
-
 #include "matrix_tests.h"
 
 namespace LinearAlgebra {

@@ -1,7 +1,3 @@
-//
-// Created by sherlock on 7/14/19.
-//
-
 #ifndef LINEARALGEBRACURSE_MATRIX_TESTS_H
 #define LINEARALGEBRACURSE_MATRIX_TESTS_H
 
