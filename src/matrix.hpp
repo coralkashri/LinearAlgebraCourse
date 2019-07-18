@@ -56,6 +56,13 @@ namespace LinearAlgebra {
             }
         };
 
+        class InvertibleMatrix : public std::exception {
+            virtual const char* what() const throw()
+            {
+                return "This matrix is an invertible matrix.";
+            }
+        };
+
         class NonSquareMatrix : public std::exception {
             virtual const char* what() const throw()
             {
@@ -65,6 +72,8 @@ namespace LinearAlgebra {
 
     private:
         std::vector<vector> rows;
+
+        matrix remove_row_and_line(size_t row, size_t line);
     };
 }
 

@@ -108,10 +108,17 @@ namespace LinearAlgebra {
     }
 
     std::vector<double> matrix::find_eigenvalues() const {
+        if (size() != dimension()) {
+            throw NonSquareMatrix();
+        }
+
+
         return std::vector<double>();
     }
 
     double matrix::det() const {
+        // TODO: fix det so it will be good in higher dimensions too.
+
         if (size() != dimension()) {
             throw NonSquareMatrix();
         }
@@ -138,5 +145,12 @@ namespace LinearAlgebra {
         }
         os << "}";
         return os;
+    }
+
+    matrix matrix::remove_row_and_line(size_t row, size_t line) {
+        matrix res(*this);
+        // todo: Implement removing of the row @row from res
+        // todo: Implement removing of the line @line from res
+        return res;
     }
 }
