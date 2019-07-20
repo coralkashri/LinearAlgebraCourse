@@ -48,8 +48,12 @@ namespace LinearAlgebra {
 
         bool is_symmetric() const;
 
-        std::vector<double> find_eigenvalues() const;
         double det() const;
+
+        matrix add_value_to_main_diagonal(double val) const;
+
+        std::vector<double> find_eigenvalues() const;
+        std::vector<vector> find_eigenvectors() const;
         size_t size() const;
         size_t dimension() const;
         friend std::ostream& operator<<(std::ostream& os, const matrix& mat);

@@ -39,4 +39,22 @@ namespace LinearAlgebra {
         std::cout << m.det() << std::endl;
     }
 
+    void matrix_tests::eigenvalues_and_eigenvectors_test() {
+        matrix m({vector({5, 6}), vector({3, -2})});
+
+        auto eigenvectors = m.find_eigenvectors();
+        for (auto &evec : eigenvectors) {
+            std::cout << evec << std::endl;
+        }
+
+        std::cout << "\n================" << std::endl;
+
+        m = matrix({vector({5, -1}), vector({1, 3})});
+
+        eigenvectors = m.find_eigenvectors();
+        for (auto &evec : eigenvectors) {
+            std::cout << evec << std::endl;
+        }
+    }
+
 }

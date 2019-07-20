@@ -1,4 +1,5 @@
 #include "matrix.hpp"
+#include "linear_system.hpp"
 
 namespace LinearAlgebra {
 
@@ -116,8 +117,12 @@ namespace LinearAlgebra {
             case 2: {
                 double trace = tr();
                 double sqrt = std::sqrt(trace * trace - 4 * det());
-                eigenvalues.emplace_back((trace + sqrt) / 2);
-                eigenvalues.emplace_back((trace - sqrt) / 2);
+                double res1, res2;
+                res1 = (trace + sqrt) / 2;
+                res2 = (trace - sqrt) / 2;
+                eigenvalues.emplace_back(res1);
+                /*if (!LinearAlgebra::approximatelyEqualAbsRel(res1, res2)) */
+                eigenvalues.emplace_back(res2);
             }
                 break;
 
@@ -163,6 +168,25 @@ namespace LinearAlgebra {
         return eigenvalues;
     }
 
+    std::vector<vector> matrix::find_eigenvectors() const {
+        std::vector<vector> eigenvectors;
+        std::vector<double> eigenvalues = find_eigenvalues();
+
+        for (auto &eval : eigenvalues) {
+            matrix m(*this);
+            m = m.add_value_to_main_diagonal(-eval);
+            std::vector<hyperplane> planes;
+            for (size_t i = 0; i < m.size(); i++) {
+                planes.emplace_back(m.rows[i], 0);
+            }
+            linear_system ls(planes);
+            linear_system::Result ls_res = ls.compute_ge_solution();
+            eigenvectors.push_back(ls_res.parametraize[0]);
+        }
+
+        return eigenvectors;
+    }
+
     double matrix::tr() const {
         double sum = 0;
         for (size_t i = 0; i < size(); i++) {
@@ -183,6 +207,16 @@ namespace LinearAlgebra {
         double res = 0;
         for (size_t curr_row = 0; curr_row < m.size(); curr_row++) {
             res += (!(curr_row % 2) * 2 - 1) * m[0][curr_row] * det(m.remove_row_and_line(0, curr_row));
+        }
+        return res;
+    }
+
+    matrix matrix::add_value_to_main_diagonal(double val) const {
+        matrix res(*this);
+        for (size_t i = 0; i < size(); i++) {
+            std::vector<double> new_row(res.rows[i].get_orientations());
+            new_row[i] += val;
+            res.rows[i] = vector(new_row);
         }
         return res;
     }

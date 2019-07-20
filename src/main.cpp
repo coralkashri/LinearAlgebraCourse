@@ -8,15 +8,15 @@
 #include "tests/plane_tests.hpp"
 #include "linear_system.hpp"
 #include "matrix.hpp"
+#include "tests/linear_system_test.hpp"
+#include "tests/matrix_tests.h"
 
 using namespace LinearAlgebra;
 
 int main() {
     std::setprecision(4);
 
-    matrix m({vector({5, 6}), vector({3, -2})});
-
-    std::cout << vector(m.find_eigenvalues()) << std::endl;
+    matrix_tests::eigenvalues_and_eigenvectors_test();
 
     return 0;
 }

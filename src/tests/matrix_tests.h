@@ -5,13 +5,15 @@
 
 namespace LinearAlgebra {
 
-    class matrix_tests {
+    namespace matrix_tests {
 
         void multiple_matrix_test();
 
         void inverse_matrices_test();
 
         void determinant_test();
+
+        void eigenvalues_and_eigenvectors_test();
     };
 
 }

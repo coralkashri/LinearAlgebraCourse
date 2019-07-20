@@ -7,7 +7,7 @@
 
 namespace LinearAlgebra {
 
-    class linear_system_test {
+    namespace linear_system_test {
 
         void test_linear_system_planes();
 
