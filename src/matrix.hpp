@@ -43,6 +43,11 @@ namespace LinearAlgebra {
          * In higher dimensions, this exception will be thrown.
          */
         matrix i() const;
+
+        double tr() const;
+
+        bool is_symmetric() const;
+
         std::vector<double> find_eigenvalues() const;
         double det() const;
         size_t size() const;
@@ -73,7 +78,8 @@ namespace LinearAlgebra {
     private:
         std::vector<vector> rows;
 
-        matrix remove_row_and_line(size_t row, size_t line);
+        matrix remove_row_and_line(size_t row_number, size_t dimension) const;
+        double det(const matrix &m) const;
     };
 }
 

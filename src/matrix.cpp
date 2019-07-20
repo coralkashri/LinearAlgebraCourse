@@ -111,23 +111,80 @@ namespace LinearAlgebra {
         if (size() != dimension()) {
             throw NonSquareMatrix();
         }
+        std::vector<double> eigenvalues;
+        switch (size()) {
+            case 2: {
+                double trace = tr();
+                double sqrt = std::sqrt(trace * trace - 4 * det());
+                eigenvalues.emplace_back((trace + sqrt) / 2);
+                eigenvalues.emplace_back((trace - sqrt) / 2);
+            }
+                break;
 
+            case 3: {
+                if (is_symmetric()) {
+                    double p1 = std::pow(rows[0][1], 2) + std::pow(rows[0][2], 2) + std::pow(rows[1][2], 2);
+                    if (!(bool) p1) {
+                        // *this is diagonal
+                        eigenvalues.emplace_back(rows[0][0]);
+                        eigenvalues.emplace_back(rows[1][1]);
+                        eigenvalues.emplace_back(rows[2][2]);
+                    } else {
+                        double q = tr() / 3;
+                        double p2 = std::pow(rows[0][0] - q, 2) + std::pow(rows[1][1] - q, 2) +
+                                    std::pow(rows[2][2] - q, 2) + 2 * p1;
+                        double p = std::sqrt(p2 / 6);
+                        matrix I = matrix(size());
+                        matrix B = (1 / p) * (*this - q * I);
+                        double r = B.det() / 2;
 
-        return std::vector<double>();
+                        // In exact arithmetic for a symmetric matrix  -1 <= r <= 1
+                        // but computation error can leave it slightly outside this range.
+                        double phi;
+                        if (r <= -1) phi = M_PI / 3;
+                        else if (r >= 1) phi = 0;
+                        else phi = std::acos(r) / 3;
+
+                        eigenvalues = std::vector<double>(3);
+                        // the eigenvalues satisfy eig3 <= eig2 <= eig1
+                        eigenvalues[0] = q + 2 * p * cos(phi);
+                        eigenvalues[2] = q + 2 * p * cos(phi + 2 * M_PI / 3);
+                        eigenvalues[1] = 3 * q - eigenvalues[0] - eigenvalues[2];
+                    }
+                } else {
+                    throw NotImplementedError();
+                }
+            }
+                break;
+
+            default:
+                throw NotImplementedError();
+        }
+        return eigenvalues;
+    }
+
+    double matrix::tr() const {
+        double sum = 0;
+        for (size_t i = 0; i < size(); i++) {
+            sum += rows[i][i];
+        }
+        return sum;
     }
 
     double matrix::det() const {
-        // TODO: fix det so it will be good in higher dimensions too.
-
         if (size() != dimension()) {
             throw NonSquareMatrix();
         }
-        double pos_mul = 1, neg_mul = -1;
-        for (size_t i = 0; i < size(); i++) {
-            pos_mul *= rows[i][i];
-            neg_mul *= rows[i][size() - 1 - i];
+        return det(*this);
+    }
+
+    double matrix::det(const matrix &m) const {
+        if (m.size() == 1) return m[0][0];
+        double res = 0;
+        for (size_t curr_row = 0; curr_row < m.size(); curr_row++) {
+            res += (!(curr_row % 2) * 2 - 1) * m[0][curr_row] * det(m.remove_row_and_line(0, curr_row));
         }
-        return pos_mul + neg_mul;
+        return res;
     }
 
     size_t matrix::size() const {
@@ -147,10 +204,34 @@ namespace LinearAlgebra {
         return os;
     }
 
-    matrix matrix::remove_row_and_line(size_t row, size_t line) {
+    matrix matrix::remove_row_and_line(size_t row_number, size_t dimension) const {
         matrix res(*this);
-        // todo: Implement removing of the row @row from res
-        // todo: Implement removing of the line @line from res
+        res.rows.erase(res.rows.begin() + row_number);
+        for (auto &row : res.rows) {
+            row = row.erase(dimension);
+        }
         return res;
+    }
+
+    bool matrix::is_symmetric() const {
+        if (size() != dimension()) {
+            return false;
+        }
+
+        bool res = true;
+
+        for (size_t i = 0; i < size() && res; i++) {
+            for (size_t j = 0; j < size() && res; j++) {
+                if (rows[i][j] != rows[j][i]) {
+                    res = false;
+                }
+            }
+        }
+
+        return res;
+    }
+
+    matrix operator*(double scalar, const matrix& mat) {
+        return mat * scalar;
     }
 }

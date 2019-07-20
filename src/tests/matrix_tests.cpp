@@ -31,4 +31,12 @@ namespace LinearAlgebra {
         }
     }
 
+    void matrix_tests::determinant_test() {
+        matrix m({vector({5, -2, 6, -1}), vector({0, 3, -8, 0}), vector({0, 0, 5, 4}), vector({0, 0, 0, 1})});
+        std::cout << m.det() << std::endl;
+
+        m = matrix({vector({2, 3}), vector({3, -6})});
+        std::cout << m.det() << std::endl;
+    }
+
 }

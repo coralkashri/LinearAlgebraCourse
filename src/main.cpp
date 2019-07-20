@@ -14,5 +14,9 @@ using namespace LinearAlgebra;
 int main() {
     std::setprecision(4);
 
+    matrix m({vector({5, 6}), vector({3, -2})});
+
+    std::cout << vector(m.find_eigenvalues()) << std::endl;
+
     return 0;
 }

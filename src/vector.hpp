@@ -47,6 +47,8 @@ namespace LinearAlgebra {
 
         double operator[](size_t orientation_dim) const;
 
+        vector erase(size_t place);
+
         friend std::ostream& operator<<(std::ostream& os, const vector& vec);
         friend vector operator*(double scalar, const vector& vec);
     };

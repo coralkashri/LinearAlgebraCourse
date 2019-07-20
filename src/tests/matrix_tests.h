@@ -11,6 +11,7 @@ namespace LinearAlgebra {
 
         void inverse_matrices_test();
 
+        void determinant_test();
     };
 
 }

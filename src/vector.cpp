@@ -261,4 +261,11 @@ namespace LinearAlgebra {
             throw VectorNotExistsInSpecifiedDimensionException();
         return orientations[orientation_dim];
     }
+
+    vector vector::erase(size_t place) {
+        vector res(*this);
+        if (place < 0 || place >= res.orientations.size()) throw VectorNotExistsInSpecifiedDimensionException();
+        res.orientations.erase(res.orientations.begin() + place);
+        return res;
+    }
 }
