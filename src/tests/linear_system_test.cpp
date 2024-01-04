@@ -13,7 +13,7 @@ namespace LinearAlgebra {
         for (auto &i : s.indices_of_first_nonzero_terms_in_each_row())
             std::cout << i << " ";
         std::cout << std::endl;
-        std::cout << boost::format("%s, %s, %s, %s") % s[0] % s[1] % s[2] % s[3] << std::endl;
+        std::cout << s[0] << ", " << s[1] << ", " << s[2] << ", " << s[3] << std::endl;
         std::cout << s.size() << std::endl;
         std::cout << s << std::endl;
 

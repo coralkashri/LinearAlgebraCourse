@@ -1,7 +1,6 @@
 #ifndef LINEARALGEBRACURSE_LINEAR_SYSTEM_TEST_H
 #define LINEARALGEBRACURSE_LINEAR_SYSTEM_TEST_H
 
-#include <boost/format.hpp>
 #include "../plane.hpp"
 #include "../linear_system.hpp"
 
